@@ -19,10 +19,10 @@ function getAllLaunches() {
   return Array.from(launches.values());
 }
 
-function addNewLaunch() {
+function addNewLaunch(launch) {
   latestFlightNumber++;
   launches.set(
-    launch.flightNumber,
+    latestFlightNumber,
     Object.assign(launch, {
       // data I want to keep static
       success: true,
