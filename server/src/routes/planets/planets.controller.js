@@ -8,4 +8,4 @@ function httpGetAllPlanets(req, res) {
 //return as an obj to export multiple functions
 module.exports = {
   httpGetAllPlanets
-};
+}
