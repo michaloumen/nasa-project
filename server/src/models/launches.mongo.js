@@ -32,3 +32,7 @@ const launchesSchema = new mongoose.Schema({
     default: true
   }
 });
+
+// Connects launchesSchema with de 'launches' collection 
+module.exports = mongoose.model('Launch', launchesSchema);
+// This first argument should always be the singular name of the collection that this model represents
