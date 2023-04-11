@@ -19,10 +19,7 @@ mongoose.connection.on('error', (err) => {
 
 async function startServer() {
   // this way data is available for any request that ever comes into our server
-  await mongoose.connect(MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
+  await mongoose.connect(MONGO_URL);
   await loadPlanetsData();
 
   server.listen(PORT, () => {
