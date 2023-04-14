@@ -36,6 +36,8 @@ function loadPlanetsData(){
 
 async function getAllPlanets() {
   return await planets.find({}, {
+    // we're telling our find operation to specifically exclude properties which match these names
+    // just works on postman
     '_id': 0, '__v': 0,
   });
 }
